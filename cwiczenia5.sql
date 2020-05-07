@@ -22,7 +22,7 @@ SELECT ST_Area(ST_Buffer(ST_ShortestLine(a.geom, b.geom), 5)) FROM obiekty a, ob
 
 -- ZAD2
 
-UPDATE obiekty SETgeom = ST_MAKEPOLYGON(ST_AddPoint(geom, ST_StartPoint(geom))) WHERE nazwa = 'obiekt4';
+UPDATE obiekty SET geom = ST_MAKEPOLYGON(ST_AddPoint(geom, ST_StartPoint(geom))) WHERE nazwa = 'obiekt4';
 SELECT ST_MakePolygon(ST_AddPoint(a.geom, ST_StartPoint(a.geom))) FROM obiekty a WHERE a.nazwa= 'obiekt4';
 
 -- ZAD3
