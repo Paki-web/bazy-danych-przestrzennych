@@ -9,7 +9,7 @@ create table budynki(
 
 create table drogi(
 	id_drogi serial primary key,
-	geom geometry,
+	geometria geometry,
 	nazwa varchar(20)
 );
 
